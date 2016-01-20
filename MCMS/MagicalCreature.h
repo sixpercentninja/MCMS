@@ -13,6 +13,8 @@
 @property NSString *name;
 @property NSString *detail;
 
+@property NSString *image;
+
 -(instancetype)initWithName: (NSString *) name detail: (NSString *) detail;
 
 @end

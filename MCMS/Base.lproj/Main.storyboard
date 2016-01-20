@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Battle Now!"/>
+                                    <connections>
+                                        <segue destination="oZD-7P-Ylv" kind="show" identifier="battleID" id="cAb-O1-tDe"/>
+                                    </connections>
                                 </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellidentifier" textLabel="J4U-DU-65F" detailTextLabel="hFE-vk-bde" style="IBUITableViewCellStyleSubtitle" id="g3o-jt-C8S">
@@ -51,7 +54,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ANd-tU-8CG" kind="show" id="rkG-RF-mEr"/>
+                                            <segue destination="ANd-tU-8CG" kind="show" identifier="creatureID" id="rkG-RF-mEr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

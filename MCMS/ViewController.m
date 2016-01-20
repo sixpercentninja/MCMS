@@ -9,11 +9,13 @@
 #import "ViewController.h"
 #import "MagicalCreature.h"
 #import "CreatureViewController.h"
+#import "BattleViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property NSMutableArray *creatures;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property NSMutableArray *battleCreatures;
 
 @end
 
@@ -25,6 +27,7 @@
     [super viewDidLoad];
     
     MagicalCreature *magical1 = [[MagicalCreature alloc] initWithName:@"Pikachu" detail:@"Lightning-based attacks"];
+    magical1.image = @"Pikachu.png";
     
     MagicalCreature *magical2 = [[MagicalCreature alloc]initWithName:@"Squirtle" detail: @"Water-based attacks"];
 
@@ -65,12 +68,28 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    CreatureViewController *destination = segue.destinationViewController;
-    //destination.title = [[self.creatures objectAtIndex:indexPath.row] name];
-    destination.creature = [self.creatures objectAtIndex:indexPath.row];
+    if ([segue.identifier isEqualToString:@"creatureID"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CreatureViewController *destination = segue.destinationViewController;
+        destination.creature = [self.creatures objectAtIndex:indexPath.row];
+    } else {
+        NSMutableArray *battleCreatures = [NSMutableArray new];
+        int remaining = 2;
+        if (self.creatures.count >= remaining){
+            while (remaining > 0) {
+                id creature = self.creatures[arc4random_uniform(self.creatures.count)];
+                if (![battleCreatures containsObject:creature]) {
+                    [battleCreatures addObject:creature];
+                    remaining--;
+                }
+        }
+        BattleViewController *destination = segue.destinationViewController;
+            destination.creature1 = [self.battleCreatures objectAtIndex:0];
+            destination.creature2 = [self.battleCreatures objectAtIndex:1];
+    }
+    
+    }
 }
-
 
 
 

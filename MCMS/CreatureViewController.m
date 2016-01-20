@@ -8,6 +8,7 @@
 
 #import "CreatureViewController.h"
 
+
 @interface CreatureViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageCreature;
 @property (weak, nonatomic) IBOutlet UITextField *editNameText;
@@ -24,6 +25,7 @@
     self.title = self.creature.name;
     self.editNameText.text = self.creature.name;
     self.detailTextField.text = self.creature.detail;
+    self.imageCreature.image = [UIImage imageNamed:self.creature.image];
 
 }
 

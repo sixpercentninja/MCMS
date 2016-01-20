@@ -10,4 +10,7 @@
 
 @interface BattleViewController : UIViewController
 
+@property MagicalCreature *creature1;
+@property MagicalCreature *creature2;
+
 @end
