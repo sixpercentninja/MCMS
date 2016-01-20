@@ -24,11 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MagicalCreature *magical1 = [[MagicalCreature alloc] initWithName:@"Pikachu"];
+    MagicalCreature *magical1 = [[MagicalCreature alloc] initWithName:@"Pikachu" detail:@"Lightning-based attacks"];
     
-    MagicalCreature *magical2 = [[MagicalCreature alloc]initWithName:@"Squirtle"];
+    MagicalCreature *magical2 = [[MagicalCreature alloc]initWithName:@"Squirtle" detail: @"Water-based attacks"];
 
-    MagicalCreature *magical3 = [[MagicalCreature alloc]initWithName:@"Charmander"];
+    MagicalCreature *magical3 = [[MagicalCreature alloc]initWithName:@"Charmander" detail:@"Fire-based attacks"];
     
     self.creatures = [NSMutableArray arrayWithObjects:magical1, magical2, magical3, nil];
 
@@ -50,6 +50,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellidentifier"];
     cell.textLabel.text = [[self.creatures objectAtIndex:indexPath.row] name];
+    cell.detailTextLabel.text = [[self.creatures objectAtIndex:indexPath.row] detail];
     return cell;
 }
 
@@ -58,7 +59,7 @@
 - (IBAction)addCreature:(UIBarButtonItem *)sender {
     //MagicalCreature *newCreature = [[MagicalCreature alloc] initWithName:self.textField.text];
     
-    [self.creatures addObject:[[MagicalCreature alloc]initWithName:self.textField.text]];
+    [self.creatures addObject:[[MagicalCreature alloc]initWithName:self.textField.text detail:@""]];
     [self.tableView reloadData];
     self.textField.text = nil;
 }
