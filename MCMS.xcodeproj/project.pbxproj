@@ -14,6 +14,7 @@
 		97583BB91C4EEBA500FCD56D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97583BB81C4EEBA500FCD56D /* Assets.xcassets */; };
 		97583BBC1C4EEBA500FCD56D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97583BBA1C4EEBA500FCD56D /* LaunchScreen.storyboard */; };
 		97583BC51C4EED1000FCD56D /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 97583BC41C4EED1000FCD56D /* MagicalCreature.m */; };
+		BD3153A31C4F06220047E128 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3153A21C4F06220047E128 /* CreatureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		97583BBD1C4EEBA500FCD56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97583BC31C4EED1000FCD56D /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalCreature.h; sourceTree = "<group>"; };
 		97583BC41C4EED1000FCD56D /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
+		BD3153A11C4F06220047E128 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
+		BD3153A21C4F06220047E128 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				97583BAF1C4EEBA500FCD56D /* AppDelegate.h */,
 				97583BB01C4EEBA500FCD56D /* AppDelegate.m */,
 				97583BB51C4EEBA500FCD56D /* Main.storyboard */,
+				BD3153A11C4F06220047E128 /* CreatureViewController.h */,
+				BD3153A21C4F06220047E128 /* CreatureViewController.m */,
 				97583BB21C4EEBA500FCD56D /* ViewController.h */,
 				97583BB31C4EEBA500FCD56D /* ViewController.m */,
 				97583BC31C4EED1000FCD56D /* MagicalCreature.h */,
@@ -157,6 +162,7 @@
 				97583BB41C4EEBA500FCD56D /* ViewController.m in Sources */,
 				97583BC51C4EED1000FCD56D /* MagicalCreature.m in Sources */,
 				97583BB11C4EEBA500FCD56D /* AppDelegate.m in Sources */,
+				BD3153A31C4F06220047E128 /* CreatureViewController.m in Sources */,
 				97583BAE1C4EEBA500FCD56D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +310,7 @@
 				97583BC21C4EEBA500FCD56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

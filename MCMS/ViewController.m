@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property NSMutableArray *creatures;
@@ -50,12 +51,19 @@
 //USER INTERACTIONS
 
 - (IBAction)addCreature:(UIBarButtonItem *)sender {
-    [self.creatures addObject:self.textField.text];
+    //MagicalCreature *newCreature = [[MagicalCreature alloc] initWithName:self.textField.text];
+    
+    [self.creatures addObject:[[MagicalCreature alloc]initWithName:self.textField.text]];
     [self.tableView reloadData];
-//
+    self.textField.text = nil;
 }
 
-//CUSTOM METHODS
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//    CreatureViewController *destination = segue.destinationViewController;
+//    destination.
+//}
+
 
 
 
