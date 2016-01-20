@@ -92,6 +92,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="141" y="396" width="92" height="62"/>
                                 </variation>
+                                <connections>
+                                    <action selector="onEditTapped:" destination="ANd-tU-8CG" eventType="touchUpInside" id="Md8-lI-ZuS"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnr-iS-qsC">
                                 <rect key="frame" x="40" y="322" width="240" height="30"/>

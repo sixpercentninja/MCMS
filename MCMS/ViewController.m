@@ -34,6 +34,11 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
+
+}
+
 //REQUIRED TABLEVIEW DELEGATE METHODS
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -61,7 +66,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     CreatureViewController *destination = segue.destinationViewController;
-    destination.title = [[self.creatures objectAtIndex:indexPath.row] name];
+    //destination.title = [[self.creatures objectAtIndex:indexPath.row] name];
+    destination.creature = [self.creatures objectAtIndex:indexPath.row];
 }
 
 
