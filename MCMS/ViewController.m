@@ -58,11 +58,11 @@
     self.textField.text = nil;
 }
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    CreatureViewController *destination = segue.destinationViewController;
-//    destination.
-//}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    CreatureViewController *destination = segue.destinationViewController;
+    destination.title = [[self.creatures objectAtIndex:indexPath.row] name];
+}
 
 
 
