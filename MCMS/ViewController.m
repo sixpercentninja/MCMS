@@ -30,8 +30,10 @@
     magical1.image = @"Pikachu.png";
     
     MagicalCreature *magical2 = [[MagicalCreature alloc]initWithName:@"Squirtle" detail: @"Water-based attacks"];
+    magical2.image = @"Squirtle.png";
 
     MagicalCreature *magical3 = [[MagicalCreature alloc]initWithName:@"Charmander" detail:@"Fire-based attacks"];
+    magical2.image = @"Charmander.png";
     
     self.creatures = [NSMutableArray arrayWithObjects:magical1, magical2, magical3, nil];
 
@@ -77,7 +79,7 @@
         int remaining = 2;
         if (self.creatures.count >= remaining){
             while (remaining > 0) {
-                id creature = self.creatures[arc4random_uniform(self.creatures.count)];
+                id creature = self.creatures[arc4random_uniform((uint32_t)self.creatures.count)];
                 if (![battleCreatures containsObject:creature]) {
                     [battleCreatures addObject:creature];
                     remaining--;
